@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597806018813",
+    "project_id": "monitoria-156d4",
+    "storage_bucket": "monitoria-156d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597806018813:android:b39b7af0bcb27cc92ece94",
+        "android_client_info": {
+          "package_name": "com.wezz.monitoriaucb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr934mkhtFzDa0Ne4v0WTEYva5sQ_q1Tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

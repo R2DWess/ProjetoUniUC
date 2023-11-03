@@ -1,0 +1,35 @@
+package com.wezz.monitoriaucb.view
+
+import android.os.Bundle
+import com.google.android.youtube.player.YouTubeBaseActivity
+import com.google.android.youtube.player.YouTubeInitializationResult
+import com.google.android.youtube.player.YouTubePlayer
+import com.wezz.monitoriaucb.R
+
+class MyYouTubeActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
+
+    private val RECOVERY_DIALOG_REQUEST = 1
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_youtube)
+
+        val youTubePlayerView: YouTubePlayerView = findViewById(R.id.youtube_view)
+        youTubePlayerView.initialize(API_KEY, this)
+    }
+
+    override fun onInitializationSuccess(provider: Youtube.Provider, player: YouTubePlayer, wasRestored: Boolean) {
+        if (!wasRestored) {
+            player.cueVideo("wKJ9KzGQq0w") // Por exemplo, wKJ9KzGQq0w é o ID do vídeo.
+        }
+    }
+
+    override fun onInitializationFailure(provider: YouTubePlayer.Provider, errorReason: YouTubeInitializationResult) {
+        if (errorReason.isUserRecoverableError) {
+            errorReason.getErrorDialog(this, RECOVERY_DIALOG_REQUEST).show()
+        } else {
+            val errorMessage = String.format(getString(R.string.error_player), errorReason.toString())
+            Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show()
+        }
+    }
+}
