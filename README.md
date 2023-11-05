@@ -8,7 +8,7 @@
 AgendamentoUCB é um aplicativo com o propósito de auxiliar os estudantes da Universidade Católica de Brasília a alcançar os monitores de forma mais 
 simples e intuitiva.
 
-Todo desenvolvimento deste software, foi com o propósito da conslusão de um trabalho Universitário.
+Todo desenvolvimento deste software, foi com o propósito da conclusão de um trabalho Universitário.
 
 ## Links importantes
 
@@ -18,12 +18,12 @@ Todo desenvolvimento deste software, foi com o propósito da conslusão de um tr
 
 
 ## Aprendizados
-Este projeto Universitário, foi útil no aprendizado do modelo de desenvolvimento de software Kotlin, utilização de extesões como firebase e outros serviços de extensão. O aperfeiçoamento em desenvolvimento de software e organização arquiteturural foi algo de grande auxilio para todos os integrandes. 
+Este projeto Universitário, foi útil no aprendizado do modelo de desenvolvimento de software Kotlin, utilização de extensões como firebase e outros serviços de extensão. O aperfeiçoamento em desenvolvimento de software e organização arquitetural foi algo de grande auxílio para todos os integrantes. 
 
 Lista de habilidades adquiridas:
 
 - Manipulação de interfaces de usuário com Kotlin, usando TextView e ListView para a exibição de dados dinâmicos.
-- Coleta de entradas do usuário por meio de EditText, Checkbox e Spinner's, permitindo uma interação interativa.
+- Coleta de entradas do usuário por meio de EditText, Checkbox e Spinner's, permitindo interações.
 - Apresentação de conteúdo de mídia utilizando ImageView para imagens estáticas e VideoView para a reprodução de vídeos.
 - Implementação de persistência de dados com sharedPreferences para guardar cálculos e resultados de sessões anteriores do usuário.
 - Integração com APIs externas por meio da biblioteca OkHttp para realizar e gerenciar requisições HTTP.
@@ -72,7 +72,7 @@ Considerar a inclusão de múltiplos idiomas para atender a uma base de estudant
 ```bash
 https://github.com/R2DWess/ProjetoUniUC.git
 ```
--  Fica sendo necessario o uso do arquivo de configuração `google-services.json` durante o uso de nossa aplicação projeto e habilitar a seção Auth no console do Firebase pela sua conta
+-  Fica sendo necessário o uso do arquivo de configuração `google-services.json` durante o uso de nossa aplicação projeto e habilitar a seção Auth no console do Firebase pela sua conta
 
 - [Guia de configuração Firebase](https://firebase.google.com/docs/auth/android/password-auth?hl=pt-br#before_you_begin)
 
