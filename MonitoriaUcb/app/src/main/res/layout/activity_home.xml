@@ -4,66 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/midnigthblue"
+    android:background="@android:color/white"
     tools:context=".view.Home">
 
+    <!-- Barra superior azul com o título "MONITORIA UCB" -->
     <TextView
-        android:id="@+id/txtNomeUsuario"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtMonitoriaUCB"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Nome do Usuário"
+        android:text="MONITORIA UCB"
         android:textColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="16dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
-
-    <TextView
-        android:id="@+id/txtTituloServicos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Título de Serviços"
-        android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtNomeUsuario"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Botão de "Agendamento" logo abaixo do título "MONITORIA UCB" -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAgendamento"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        app:layout_constraintTop_toBottomOf="@id/recyclerViewServicos"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="2dp"
+        app:layout_constraintTop_toBottomOf="@id/txtMonitoriaUCB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
-        <Button
-            android:id="@+id/btAgendar"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="AGENDAR"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/blue"
-            android:drawableEnd="@drawable/baseline_arrow_right_alt_24"
-            android:padding="15dp" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
 
-        <Button
-            android:id="@+id/btVideos"
-            android:layout_width="0dp"
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agendamento"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botão de "Vídeos" centralizado na tela -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardVideos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="2dp"
+        app:layout_constraintTop_toBottomOf="@id/cardAgendamento"
+        app:layout_constraintBottom_toTopOf="@id/cardServicos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="VIDEOS"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/blue"
-            android:padding="15dp" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img3" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vídeos"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botão de "Serviços" na parte inferior da tela -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardServicos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="2dp"
+        app:layout_constraintTop_toBottomOf="@id/cardVideos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Serviços"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

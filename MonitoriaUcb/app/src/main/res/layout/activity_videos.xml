@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/midnigthblue">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@color/blue"
+        android:text="Vídeos"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:padding="16dp"/>
 
-        <!-- Player de vídeo 1 -->
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:id="@+id/video1"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <!-- Player de vídeo 2 -->
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:id="@+id/video2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            <!-- Player de vídeo 1 -->
+            <VideoView
+                android:id="@+id/videoView1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp" />
 
-        <!-- Player de vídeo 3 -->
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:id="@+id/video3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOME DO CONTEÚDO DO VÍDEO 1"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
 
-        <!-- Player de vídeo 4 -->
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:id="@+id/video4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            <!-- Player de vídeo 2 -->
+            <VideoView
+                android:id="@+id/videoView2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOME DO CONTEÚDO DO VÍDEO 2"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
 
-</ScrollView>
+            <!-- Player de vídeo 3 -->
+            <VideoView
+                android:id="@+id/videoView3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOME DO CONTEÚDO DO VÍDEO 3"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

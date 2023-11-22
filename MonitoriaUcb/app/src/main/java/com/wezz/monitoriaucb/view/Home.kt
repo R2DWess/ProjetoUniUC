@@ -32,32 +32,31 @@ class Home : AppCompatActivity() {
 
         getServicos()
 
-        // Ouvinte para o botão Agendar
         binding.btAgendar.setOnClickListener {
             val intent = Intent(this, Agendamento::class.java)
             intent.putExtra("nome", nome)
             startActivity(intent)
         }
 
-        // Ouvinte para o botão de Vídeos
         binding.btVideos.setOnClickListener {
             val intent = Intent(this, VideosActivity::class.java)
             startActivity(intent)
         }
+        binding.btServicos.setOnClickListener {
+            val intent = Intent(this, ServicesActivity::class.java)
+            startActivity(intent)
 
     }
 
     private fun getServicos() {
-        val servico1 = Servicos(R.drawable.img1, "Monitores")
+        val servico1 = Servicos(R.drawable.img1, "Agendamento")
         listaServicos.add(servico1)
 
-        val servico2 = Servicos(R.drawable.img2, "Livros")
+        val servico2 = Servicos(R.drawable.img2, "Videos")
         listaServicos.add(servico2)
 
-        val servico3 = Servicos(R.drawable.img3, "Horários")
+        val servico3 = Servicos(R.drawable.img3, "Serviços")
         listaServicos.add(servico3)
 
-        val servico4 = Servicos(R.drawable.img4, "Chat")
-        listaServicos.add(servico4)
     }
 }

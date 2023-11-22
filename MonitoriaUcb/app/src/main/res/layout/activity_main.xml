@@ -1,77 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
     <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/blue"
-        android:gravity="center"
         tools:context=".MainActivity">
 
-        <TextView
+        <!-- Parte superior azul -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Monitoria UCB"
-            android:textSize="36sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:orientation="vertical"
+            android:background="@color/blue"
+            android:gravity="center">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:src="@drawable/logo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monitoria UCB"
+                android:textSize="36sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"/>
 
-        <EditText
-            android:id="@+id/editNome"
+            <ImageView
+                android:layout_width="209dp"
+                android:layout_height="237dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
+        <!-- Parte inferior branca -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nome"
-            android:background="@color/white"
-            android:maxLines="1"
-            android:inputType="text"
+            android:layout_height="706dp"
+            android:background="@android:color/white"
             android:gravity="center"
-            android:padding="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"/>
+            android:orientation="vertical"
+            android:paddingTop="32dp">
 
-        <EditText
-            android:id="@+id/editSenha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Matricula"
-            android:background="@color/white"
-            android:maxLines="1"
-            android:inputType="numberPassword"
-            android:gravity="center"
-            android:padding="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"/>
+            <!-- Campos de texto e botão -->
+            <!-- Campos de texto e botão -->
+            <EditText
+                android:id="@+id/editMatricula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:gravity="center"
+                android:hint="Matricula"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp" />
 
-        <Button
-            android:id="@+id/btLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LOGIN"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:padding="15dp"
-            app:cornerRadius="15dp"
-            android:background="@color/black"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="20dp"/>
+            <EditText
+                android:id="@+id/editSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:gravity="center"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="15dp" />
 
+            <Button
+                android:id="@+id/btEntrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/blue"
+                android:padding="15dp"
+                android:text="ENTRAR"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="15dp" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
