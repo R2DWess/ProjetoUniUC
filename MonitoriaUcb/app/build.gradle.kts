@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.wezz.monitoriaucb"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.wezz.monitoriaucb"
@@ -51,8 +51,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-firestore:24.9.0")
     implementation("com.google.android.youtube.player:youtube-android-player-api:1.2.2")
+    implementation ("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation ("androidx.cardview:cardview:1.0.0")
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
