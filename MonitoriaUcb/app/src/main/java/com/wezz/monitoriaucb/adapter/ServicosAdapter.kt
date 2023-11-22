@@ -26,6 +26,6 @@ class ServicosAdapter (private val context: Context, private val listaServicos: 
 
     inner class ServicosViewHolder(binding: ServicosItemBinding): RecyclerView.ViewHolder(binding.root) {
         val imgServico = binding.imgServico
-        val txtServico = binding.txtServico
+        val txtServico = binding.txtServico 
     }
 }
